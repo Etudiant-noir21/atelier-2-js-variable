@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tache-2 atelier js</title>
+</head>
+<style>
+    body{
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    h1{
+        text-align: center;
+        font-size: 48px;
+        font-weight: 600;
+    }
+    #date{
+        font-size: 24px;
+        text-align: center;
+        margin-top: 20px;
+        font-weight: 700;
+    }
+    #affichage{
+        font-size: 24px;
+        text-align: center;
+        margin-top: 20px;
+        font-weight: 700;
+    }
+</style>
+<body>
+    <h1>Types de Données en JavaScript</h1>
+
+  <p id="date"></p>
+  <p id="affichage"></p>
+    <script>
+        // Declaration d'une variable de type int
+         let sommes = 20;
+        //  alert(' sommes est de type : ' + typeof sommes);
+
+        //  conversion en string
+         sommes = String( sommes);
+        //  alert('str est de type : ' + typeof str);
+
+        //  affichange par alert
+        alert(' sommes est de type : ' + typeof sommes);
+
+        // une variable de type date 
+        let date = new Date () ;
+
+        // recuperation du jour
+         let day = date.getDay();
+         console.log(day)
+
+        //  recuperation du date 
+        let dateJ = date.getDate();
+        console.log(dateJ)
+
+
+        // ajout d'un 0 devant les chiffres inferieurs a 10
+
+        if(dateJ < 10){
+            dateJ = '0' + dateJ;
+        }
+        // recuperation du mois
+        let mois = date.getMonth() + 1;
+        console.log(mois)
+//    ajout de 0 devant les chiffres inferieur a 10
+         if(mois < 10){
+         mois = '0' + mois;
+        }
+        // recuperation de l'annee
+        let annee = date.getFullYear();
+        console.log(annee)
+
+        // affichage du date sur le console 
+        let affichage =  dateJ  + ' : ' +  mois  + ' : ' + annee;
+        console.log(affichage)
+        alert(affichage)
+        // affichons la date du jour dans notre page
+        document.getElementById('date').innerHTML = date;    
+        document.getElementById('affichage').innerHTML = "aujourd'hui c'est le : " + affichage;   
+        
+        
+
+
+        
+        console.log(date);
+    </script>
+</body>
+</html>
